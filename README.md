@@ -437,3 +437,42 @@ Al correr el comando se enviara al repositorio, el comando `-m` es para agregar 
     +
     +Hoy hablaremos de su historia.
     \ No newline at end of file
+
+### Agregar commit sin el comando -m
+
+**Comando**.
+
+`git commit`
+
+**Resultado:**
+
+Se visualiza un editor de comandos llamado *VIM*.
+
+Se agrega el comentario.
+
+![Tux, the Linux mascot](../proyecto1/Assets/Images/VIM%20-%20Agregar%20comentario.png)
+
+*Para salir de la terminal VIM es:*
+
+    Paso 1: ESC
+    Paso 2: SHIFT + Z + Z
+    
+    Se envia los cambios.
+
+Resultado al salir:
+
+    $ git commit
+    [master fc71632] Agregamos un cambio en su personalidad.
+    2 files changed, 77 insertions(+), 3 deletions(-)
+
+### Ver la diferencia entre commit de un archivo
+
+**Comando**.
+
+`git diff {hash antiguo} {hash más reciente}`
+
+**Ejemplo**.
+
+Correr el comando `git log {archivo}` para visualizar el id de cada commit
+
+`git diff 637bc508fc645bf979dcfb7049d89b16ce14fbca fc71632a0f9b3fa110151165cdd7c59caf596cbb`
