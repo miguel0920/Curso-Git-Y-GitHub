@@ -143,6 +143,117 @@
 
 ## Comandos Git
 
+### Visualizar configuración actual
+
+**Comando**.
+
+`git config --list`
+
+**Resultado:**
+
+    diff.astextplain.textconv=astextplain
+    filter.lfs.clean=git-lfs clean -- %f
+    filter.lfs.smudge=git-lfs smudge -- %f
+    filter.lfs.process=git-lfs filter-process
+    filter.lfs.required=true
+    http.sslbackend=openssl
+    http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+    core.autocrlf=true
+    core.fscache=true
+    core.symlinks=false
+    pull.rebase=false
+    credential.helper=manager-core
+    credential.https://dev.azure.com.usehttppath=true
+    init.defaultbranch=master
+    filter.lfs.required=true
+    filter.lfs.clean=git-lfs clean -- %f
+    filter.lfs.smudge=git-lfs smudge -- %f
+    filter.lfs.process=git-lfs filter-process
+    core.repositoryformatversion=0
+    core.filemode=false
+    core.bare=false
+    core.logallrefupdates=true
+    core.symlinks=false
+    core.ignorecase=true
+
+### Visualizar ruta de configuración
+
+**Comando**.
+
+`git config --list --show-origin`
+
+**Resultado:**
+
+    file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
+    file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f
+    file:C:/Program Files/Git/etc/gitconfig filter.lfs.smudge=git-lfs smudge -- %f
+    file:C:/Program Files/Git/etc/gitconfig filter.lfs.process=git-lfs  filter-process
+    file:C:/Program Files/Git/etc/gitconfig filter.lfs.required=true
+    file:C:/Program Files/Git/etc/gitconfig http.sslbackend=openssl
+    file:C:/Program Files/Git/etc/gitconfig http.sslcainfo=C:/Program Files/Git/    mingw64/ssl/certs/ca-bundle.crt
+    file:C:/Program Files/Git/etc/gitconfig core.autocrlf=true
+    file:C:/Program Files/Git/etc/gitconfig core.fscache=true
+    file:C:/Program Files/Git/etc/gitconfig core.symlinks=false
+    file:C:/Program Files/Git/etc/gitconfig pull.rebase=false
+    file:C:/Program Files/Git/etc/gitconfig credential.helper=manager-core
+    file:C:/Program Files/Git/etc/gitconfig credential.https://dev.azure.com.   usehttppath=true
+    file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=master
+    file:C:/Users/{usuario}/.gitconfig filter.lfs.required=true
+    file:C:/Users/{usuario}/.gitconfig filter.lfs.clean=git-lfs clean -- %f
+    file:C:/Users/{usuario}/.gitconfig filter.lfs.smudge=git-lfs smudge -- %f
+    file:C:/Users/{usuario}/.gitconfig filter.lfs.process=git-lfs  filter-process
+    file:.git/config        core.repositoryformatversion=0
+    file:.git/config        core.filemode=false
+    file:.git/config        core.bare=false
+    file:.git/config        core.logallrefupdates=true
+    file:.git/config        core.symlinks=false
+    file:.git/config        core.ignorecase=true
+
+### Agregar usuario y correo
+
+**Comando**.
+
+Configurar usuario y correo para identificar quien realiza los cambios
+
+Usuario:
+
+`git config --global user.name "{Nombre del usuario}"`
+
+Correo electrónico:
+
+`git config --global user.email "{Correo del usuario}"`
+
+**Resultado:**
+
+Al correr de nuevo el comando `git config --list`, se visualiza el usuario y correo.
+
+    diff.astextplain.textconv=astextplain
+    filter.lfs.clean=git-lfs clean -- %f
+    filter.lfs.smudge=git-lfs smudge -- %f
+    filter.lfs.process=git-lfs filter-process
+    filter.lfs.required=true
+    http.sslbackend=openssl
+    http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+    core.autocrlf=true
+    core.fscache=true
+    core.symlinks=false
+    pull.rebase=false
+    credential.helper=manager-core
+    credential.https://dev.azure.com.usehttppath=true
+    init.defaultbranch=master
+    user.name=Miguel Angel
+    user.email=miguel@gmail.com
+    filter.lfs.required=true
+    filter.lfs.clean=git-lfs clean -- %f
+    filter.lfs.smudge=git-lfs smudge -- %f
+    filter.lfs.process=git-lfs filter-process
+    core.repositoryformatversion=0
+    core.filemode=false
+    core.bare=false
+    core.logallrefupdates=true
+    core.symlinks=false
+    core.ignorecase=true
+
 ### Crear repositorio local
 
 Para correr el comando `git init` nos debemos ubicar en la carpeta donde se almacenara todos los archivos del proyecto.
@@ -213,6 +324,14 @@ Ejemplo
 
 `git rm --cached historia.txt`
 
+Al correr el siguiente comando se devuelve el archivo.
+
+`git rm {archivo}`
+
+Ejemplo
+
+`git rm historia.txt`
+
 **Resultado:**
 
     $  git rm --cached historia.txt
@@ -231,3 +350,18 @@ Al correr el comando `git status` se visualiza que un archivo esta listo para pr
     Untracked files:
     (use "git add <file>..." to include in what will be committed)
             historia.txt
+
+### Enviar cambios al repositorio
+
+**Comando**.
+
+Al correr el comando se enviara al repositorio, el comando `-m` es para agregar un comentario.
+
+`git commit -m 'Primer commit'`
+
+**Resultado:**
+
+    [master (root-commit) 07e0ccf] Primer commit
+    2 files changed, 233 insertions(+)
+    create mode 100644 README.md
+    create mode 100644 historia.txt
