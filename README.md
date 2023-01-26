@@ -291,11 +291,11 @@ Ver estado actual del proyecto y no se realiza ningún cambio si no se añade el
 
 **Comando**.
 
-Añade todos los documentos.
+Añade todos los documentos de la ruta actual.
 
 `git add .`
 
-Añade un documento especifico
+Añade un documento especifico.
 
 `git add historia.txt`
 
@@ -365,3 +365,75 @@ Al correr el comando se enviara al repositorio, el comando `-m` es para agregar 
     2 files changed, 233 insertions(+)
     create mode 100644 README.md
     create mode 100644 historia.txt
+
+### Visualizar historia de un archivo
+
+**Comando**.
+
+`git log {archivo}`
+
+**Resultado:**
+
+*Rama actual y versión más reciente:* (HEAD -> master)
+
+*Hash del commit (Identificador unico por commit):* 637bc508fc645bf979dcfb7049d89b16ce14fbca
+
+*Autor:* Author: Miguel Angel Barahona <miguel@gmail.com>
+
+    commit 637bc508fc645bf979dcfb7049d89b16ce14fbca (HEAD -> master)
+    Author: Miguel Angel <miguel@gmail.com>
+    Date:   Wed Jan 25 20:40:38 2023 -0500
+
+        Modificación archivo historia y se añade comandos al README.md
+
+    commit 07e0ccf4646907899c0d9e028bd34d2ef9285d0d
+    Author: Miguel Angel <miguel@gmail.com>
+    Date:   Wed Jan 25 20:37:40 2023 -0500
+
+        Primer commit
+
+### Visualizar cambios del archivo por dentro
+
+**Comando**.
+
+`git show {archivo}`
+
+**Resultado:**
+
+*tomar la versión anterior con la actual:* diff --git a/historia.txt b/historia.txt
+
+*Indicador entre la base de datos de git:* index e69de29..8a22836 100644
+
+*Versión actuales*:
+
+--- a/historia.txt
+
++++ b/historia.txt
+
+*Indicador de cuantos bytes cambiaron:* @@ -0,0 +1,5 @@
+
+*Cambios realizados entre las dos versiones:*
+
+> +Esta es la historio de Miguel
+> +
+> +Miguel tiene 27 años y nació en Colombia
+> +
+> +Hoy hablaremos de su historia.
+
+    commit 637bc508fc645bf979dcfb7049d89b16ce14fbca (HEAD -> master)
+    Author: Miguel Angel <miguel@gmail.com>
+    Date:   Wed Jan 25 20:40:38 2023 -0500
+
+        Modificación archivo historia y se añade comandos al README.md
+
+    diff --git a/historia.txt b/historia.txt
+    index e69de29..8a22836 100644
+    --- a/historia.txt
+    +++ b/historia.txt
+    @@ -0,0 +1,5 @@
+    +Esta es la historio de Miguel
+    +
+    +Miguel tiene 27 años y nació en Colombia
+    +
+    +Hoy hablaremos de su historia.
+    \ No newline at end of file
