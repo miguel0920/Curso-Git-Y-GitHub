@@ -488,3 +488,88 @@ Devolver a un versión anterior, tener cuidado con este comando porque al correr
 **Resultado:**
 
     HEAD is not at fc7163 Agregamos un cambio en su personalidad.
+
+### Visualizar el cambio de archivos
+
+**Comando**.
+
+`git log --stat`
+
+**Resultado:**
+
+README.md    | 76 ++++++++++++ (Tamaño en bytes -> 76)
+
+historia.txt |  4 +++-  (Tamaño en bytes -> 4)
+
+    $ git log --stat
+    commit 284fd82c6f17afdc63e66f484026c516d3dc6d52 (HEAD -> master)
+    Author: Miguel Angel <miguel@gmail.com>
+    Date:   Fri Jan 27 20:42:35 2023 -0500
+
+        Pagina y estilos Blog post
+
+    Assets/css/styles.css |  5 +++++
+    README.md             | 12 ++++++++++++
+    blogpost.html         | 18 ++++++++++++++++++
+    3 files changed, 35 insertions(+)
+
+    commit f5915174f6f14985e4500ec248034a351533c7a2
+    Author: Miguel Angel <miguel@gmail.com>
+    Date:   Wed Jan 25 21:51:45 2023 -0500
+
+        Se modifica README y a se agrega Imagen
+
+    Assets/Images/VIM - Agregar comentario.png | Bin 0 -> 24942 bytes
+    README.md                                  |  39 +++++++++++++++++++++++++++++
+    2 files changed, 39 insertions(+)
+
+    commit fc71632a0f9b3fa110151165cdd7c59caf596cbb
+    Author: Miguel Angel <miguel@gmail.com>
+    Date:   Wed Jan 25 20:56:55 2023 -0500
+
+        Agregamos un cambio en su personalidad.
+
+    README.md    | 76 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+    historia.txt |  4 +++-
+    2 files changed, 77 insertions(+), 3 deletions(-)
+
+    commit 637bc508fc645bf979dcfb7049d89b16ce14fbca
+    Author: Miguel Angel <miguel@gmail.com>
+    Date:   Wed Jan 25 20:40:38 2023 -0500
+
+        Modificación archivo historia y se añade comandos al README.md
+
+    README.md    | 134 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    historia.txt |   5 +++
+    2 files changed, 139 insertions(+)
+
+    commit 07e0ccf4646907899c0d9e028bd34d2ef9285d0d
+    Author: Miguel Angel <miguel@gmail.com>
+    Date:   Wed Jan 25 20:37:40 2023 -0500
+
+        Primer commit
+
+    README.md    | 233 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    historia.txt |   0
+    2 files changed, 233 insertions(+)
+
+### Devolverse un archivo a una versión anterior
+
+**Comando**.
+
+`git checkout {hash} 'archivo'`
+
+**Ejemplo**.
+
+Devolverse a una versión anterior del archivo.
+
+`git checkout fc71632a0f9b3fa110151165cdd7c59caf596cbb historia.txt`
+
+Devolverse a la versión actual del archivo.
+
+`git checkout master historia.txt`
+
+**Resultado:**
+
+    $ git checkout 637bc508fc645bf979dcfb7049d89b16ce14fbca historia.txt
+    Updated 1 path from 28033b8
