@@ -573,3 +573,20 @@ Devolverse a la versión actual del archivo.
 
     $ git checkout 637bc508fc645bf979dcfb7049d89b16ce14fbca historia.txt
     Updated 1 path from 28033b8
+
+### Enviar cambios al repositorio local
+
+**Comando**.
+
+Enviar archivos al *Stage* y enviar al *repositorio local*. Solo sirve para los archivos que estan modificados, los nuevos que se crean se debe manejar con `git add .` o `git add {file.txt}`.
+
+`git commit -am '{Mensaje}'`
+
+**Ejemplo**.
+
+`git commit -am 'Primer commit'`
+
+`git checkout fc71632a0f9b3fa110151165cdd7c59caf596cbb historia.txt`
+
+**Resultado:**
+
