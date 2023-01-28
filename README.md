@@ -586,7 +586,30 @@ Enviar archivos al *Stage* y enviar al *repositorio local*. Solo sirve para los 
 
 `git commit -am 'Primer commit'`
 
-`git checkout fc71632a0f9b3fa110151165cdd7c59caf596cbb historia.txt`
-
 **Resultado:**
 
+    $ git commit -am 'Cambiar el HTML y agregar estilos'
+    [master aa27bee] Cambiar el HTML y agregar estilos
+    3 files changed, 42 insertions(+), 4 deletions(-)
+
+### Crear una rama
+
+**Comando**.
+
+Crear una rama desde donde estoy
+
+`git branch {nombre de la rama}`
+
+**Ejemplo**.
+
+`git branch cabecera`
+
+### Moverse a una rama
+
+**Comando**.
+
+`git checkout {nombre de la rama}`
+
+**Ejemplo**.
+
+`git checkout cabecera`
