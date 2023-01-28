@@ -476,3 +476,15 @@ Resultado al salir:
 Correr el comando `git log {archivo}` para visualizar el id de cada commit
 
 `git diff 637bc508fc645bf979dcfb7049d89b16ce14fbca fc71632a0f9b3fa110151165cdd7c59caf596cbb`
+
+### Volver a un versión anterior (--hard)
+
+**Comando**.
+
+Devolver a un versión anterior, tener cuidado con este comando porque al correr el comando se borrar todo lo realizado desde el hash seleccionado hasta el más reciente y el hash al que se queria devolver queda como el más reciente.
+
+`git reset {versión anterior} --hard`
+
+**Resultado:**
+
+    HEAD is not at fc7163 Agregamos un cambio en su personalidad.
