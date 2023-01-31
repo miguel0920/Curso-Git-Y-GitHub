@@ -613,3 +613,15 @@ Crear una rama desde donde estoy
 **Ejemplo**.
 
 `git checkout cabecera`
+
+### Listar ramas
+
+**Comando**.
+
+`git branch`
+
+**Resultado:**
+
+    git branch
+    * cabecera
+    master
