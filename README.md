@@ -596,7 +596,7 @@ Enviar archivos al *Stage* y enviar al *repositorio local*. Solo sirve para los 
 
 **Comando**.
 
-Crear una rama desde donde estoy
+Crear una rama desde la rama donde me encuentro
 
 `git branch {nombre de la rama}`
 
@@ -622,6 +622,34 @@ Crear una rama desde donde estoy
 
 **Resultado:**
 
+El * indica la rama actual donde se encuentra.
+
     git branch
     * cabecera
     master
+
+### Merge Entre ramas
+
+**Comando**.
+
+`git merge {rama a fusionar}`
+
+**Ejemplo**.
+
+Se encuentra en la rama *master* y deseamos fusionar lo que contiene la rama *cabecera*, corremos el siguiente comando.
+
+`git merge cabecera`
+
+**Resultado:**
+
+Se nos visualizara el editor de comando VIM y despues de colocar el comentario correspondiente se nos visualizara que fue correcto el merge.
+
+Nos pide un colocar un mensaje porque cuando se ejecuta el comando *merge* es como ejecutar un **commit**.
+
+    git merge cabecera
+    Auto-merging blogpost.html
+    Merge made by the 'recursive' strategy.
+    Assets/css/styles.css | 34 +++++++++++++++++++++++++++-------
+    README.md             | 37 ++++++++++++++++++++++++++++++++++++-
+    blogpost.html         |  6 ++++++
+    3 files changed, 69 insertions(+), 8 deletions(-)
