@@ -666,8 +666,36 @@ Modificar en las dos ramas y realizar *commit* a un texto o un estilo en la mism
 
 **Rama Cabecera:**
 
-![Ejemplo agregando un comentario con VIM](../proyecto1/Assets/Images/CambiarEstilo_ConflictoMerge_Cabecera.png)
+![Ejemplo cambiando color de la fuente en Cabecera](../proyecto1/Assets/images/CambiarEstilo_ConflictoMerge_Cabecera.png)
 
 Realizamos commit.
 
+**Rama Master:**
+
+![Ejemplo cambiando color de la fuente en Master](../proyecto1/Assets/images/CambiarEstilo_ConflictoMerge_Master.png)
+
+Realizamos commit.
+
+Solicitamos merge desde ***cabecera*** a ***master***
+
+Al solicitarlo se nos visualizar el siguiente mensaje. Donde nos dice en que archivo se encuentra el conflicto.
+
+    $ git merge cabecera
+    Auto-merging Assets/css/styles.css
+    CONFLICT (content): Merge conflict in Assets/css/styles.css
+    Automatic merge failed; fix conflicts and then commit the result.
+
+Al ver el codigo en el visual studio sale el siguiente mensaje
+![Ejemplo cambiando color de la fuente en Master](../proyecto1/Assets/images/Ejemplo%20de%20conflicto.png)
+
+**Accept Current Change:** Aceptar cambios de la rama Actual, en este ejemplo es master.
+
+**Accept Incoming Change:** Aceptar cambios de la rama que deseamos fusionar, en este ejemplo cabecera.
+
+**Accept Both Changes:** Aceptar ambos cambios.
+
+**Compare Changes:** Comparar los cambios.
+
 **Resultado:**
+
+Una vez resuelto los cambios se realiza commit y queda todo resuelto.
