@@ -450,7 +450,7 @@ Se visualiza un editor de comandos llamado *VIM*.
 
 Se agrega el comentario.
 
-![Tux, the Linux mascot](../proyecto1/Assets/Images/VIM%20-%20Agregar%20comentario.png)
+![Ejemplo agregando un comentario con VIM](../proyecto1/Assets/Images/VIM%20-%20Agregar%20comentario.png)
 
 *Para salir de la terminal VIM es:*
 
@@ -653,3 +653,21 @@ Nos pide un colocar un mensaje porque cuando se ejecuta el comando *merge* es co
     README.md             | 37 ++++++++++++++++++++++++++++++++++++-
     blogpost.html         |  6 ++++++
     3 files changed, 69 insertions(+), 8 deletions(-)
+
+### Resolviendo conflictos realizando Merge Entre ramas
+
+**Comando**.
+
+`git merge {rama a fusionar}`
+
+**Ejemplo**.
+
+Modificar en las dos ramas y realizar *commit* a un texto o un estilo en la misma ubicación.
+
+**Rama Cabecera:**
+
+![Ejemplo agregando un comentario con VIM](../proyecto1/Assets/Images/CambiarEstilo_ConflictoMerge_Cabecera.png)
+
+Realizamos commit.
+
+**Resultado:**
