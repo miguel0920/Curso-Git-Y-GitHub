@@ -171,3 +171,30 @@ Se utiliza `~` por que es el shortcut de nuestro home.
 **Resultado.**
 
     Identity added: /c/Users/{user}/.ssh/id_rsa (mbarahona00@gmail.com)
+
+Una vez realizado agregar la llave publica en el servicio que deseamos que se conecten.
+
+## Cambiar conexión remoto HTTPS a SSH
+
+Revisamos la conexión actual con el comando `git remote -v` una vez se identique cambiamos la conexión.
+
+**Comando.**
+
+`git remote set-url origin {url ssh}`
+
+**Ejemplo**.
+
+`git remote set-url origin git@github.com:miguel0920/Curso-Git-Y-GitHub.git`
+
+**Resultado.**
+
+1. Al corre el comando `git remote -v` se visualiza la nueva conexión.
+2. Corremos el comando `git pull` para obtener los cambios de la rama remota.
+3. Se nos visualizara el siguiente mensaje y damos es aceptar (yes).
+
+        The authenticity of host 'github.com ({ip})' can't be established.
+        ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+        This key is not known by any other names
+        Are you sure you want to continue connecting (yes/no/[fingerprint])?
+4. Obtener cambios desde remoto `git pull origin {nombre de la rama}`
+5. Proteger cambios y sube los cambios que se tengan en local `git push origin {nombre de la rama remota}`.
