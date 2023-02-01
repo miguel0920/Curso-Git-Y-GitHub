@@ -795,3 +795,5 @@ Se nos visualiza un error que se reúsa a realizar el merge con mi rama local po
 `git pull origin main --allow-unrelated-histories`
 
 **Resultado:**
+
+Si salen conflictos se resuelven de lo contrario nos pedira ingresar un mensaje del cual ingresamos y queda listo para enviar los cambios a la rama remota.
