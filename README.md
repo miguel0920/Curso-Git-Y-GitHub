@@ -699,3 +699,99 @@ Al ver el codigo en el visual studio sale el siguiente mensaje
 **Resultado:**
 
 Una vez resuelto los cambios se realiza commit y queda todo resuelto.
+
+### Agregar origen remoto (HTTPS)
+
+**Comando**.
+
+`git remote add origin {url del repositorio}`
+
+**Ejemplo**.
+Copiamos la url del repositorio remoto que se encuentra en HTTPS.
+
+![Ejemplo cambiando color de la fuente en Cabecera](../proyecto1/Assets/images/CopiasUrlRemota.png)
+
+`git remote add origin https://github.com/miguel0920/Curso-Git-Y-GitHub.git`
+
+**Resultado:**
+
+No se visualiza nada pero al correr el comando `git remote`, se visualiza lo nuevo creado llamado origin
+
+    $ git remote
+    origin
+
+### Visualizar conexión Remota en local
+
+**Comando**.
+
+`git remote -v`
+
+**Resultado:**
+
+    $ git remote -v
+    origin  https://github.com/miguel0920/Curso-Git-Y-GitHub.git (fetch)
+    origin  https://github.com/miguel0920/Curso-Git-Y-GitHub.git (push)
+
+Se visualizar dos opciones:
+
+**(fetch):** Traer codigo remoto.
+
+**(push):** Enviar codigo al remoto.
+
+### Enviar cambios a la rama local
+
+**Comando**.
+
+Se coloca **master:main** porque master significa la rama local y main es la rama remota donde queremos enviar, si enviamos solo **master** nos creara una rama nueva en GitHub.
+
+`git push origin master:main`
+
+**Resultado:**
+
+***Nota: puede que le solicite las credenciales si es la primera vez.***
+
+De lo contrario se visualiza el siguiente mensaje, del cual nos dice que debemos integrar los cambios remotos antes de enviarlos.
+
+    git push origin master:main
+    To https://github.com/miguel0920/Curso-Git-Y-GitHub.git
+    ! [rejected]        master -> main (fetch first)
+    error: failed to push some refs to 'https://github.com/miguel0920/Curso-Git-Y-GitHub.git'
+    hint: Updates were rejected because the remote contains work that you do
+    hint: not have locally. This is usually caused by another repository pushing
+    hint: to the same ref. You may want to first integrate the remote changes
+    hint: (e.g., 'git pull ...') before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+### Obtener cambio de la rama remota
+
+**Comando**.
+
+`git pull origin {rama remota}`
+
+**Ejemplo**.
+`git pull origin main`
+
+**Resultado:**
+
+Se nos visualiza un error que se reúsa a realizar el merge con mi rama local por son dos historias distintas.
+
+    remote: Enumerating objects: 3, done.
+    remote: Counting objects: 100% (3/3), done.
+    remote: Compressing objects: 100% (2/2), done.
+    remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (3/3), 639 bytes | 71.00 KiB/s, done.
+    From https://github.com/miguel0920/Curso-Git-Y-GitHub
+    * branch            main       -> FETCH_HEAD
+    * [new branch]      main       -> origin/main
+    fatal: refusing to merge unrelated histories
+
+### Obtener cambio de la rama remota con su historia
+
+**Comando**.
+
+`git pull origin {rama remota} --allow-unrelated-histories`
+
+**Ejemplo**.
+`git pull origin main --allow-unrelated-histories`
+
+**Resultado:**
