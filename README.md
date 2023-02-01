@@ -450,7 +450,7 @@ Se visualiza un editor de comandos llamado *VIM*.
 
 Se agrega el comentario.
 
-![Ejemplo agregando un comentario con VIM](assets/Images/VIM%20-%20Agregar%20comentario.png)
+![Ejemplo agregando un comentario con VIM](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/assets/Images/VIM%20-%20Agregar%20comentario.png)
 
 *Para salir de la terminal VIM es:*
 
@@ -666,13 +666,13 @@ Modificar en las dos ramas y realizar *commit* a un texto o un estilo en la mism
 
 **Rama Cabecera:**
 
-![Ejemplo cambiando color de la fuente en Cabecera](assets/images/CambiarEstilo_ConflictoMerge_Cabecera.png)
+![Ejemplo cambiando color de la fuente en Cabecera](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/assets/images/CambiarEstilo_ConflictoMerge_Cabecera.png)
 
 Realizamos commit.
 
 **Rama Master:**
 
-![Ejemplo cambiando color de la fuente en Master](assets/images/CambiarEstilo_ConflictoMerge_Master.png)
+![Ejemplo cambiando color de la fuente en Master](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/assets/images/CambiarEstilo_ConflictoMerge_Master.png)
 
 Realizamos commit.
 
@@ -686,7 +686,7 @@ Al solicitarlo se nos visualizar el siguiente mensaje. Donde nos dice en que arc
     Automatic merge failed; fix conflicts and then commit the result.
 
 Al ver el codigo en el visual studio sale el siguiente mensaje
-![Ejemplo cambiando color de la fuente en Master](assets/images/Ejemplo%20de%20conflicto.png)
+![Ejemplo cambiando color de la fuente en Master](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/assets/images/Ejemplo%20de%20conflicto.png)
 
 **Accept Current Change:** Aceptar cambios de la rama Actual, en este ejemplo es master.
 
@@ -709,7 +709,7 @@ Una vez resuelto los cambios se realiza commit y queda todo resuelto.
 **Ejemplo**.
 Copiamos la url del repositorio remoto que se encuentra en HTTPS.
 
-![Ejemplo cambiando color de la fuente en Cabecera](assets/images/CopiasUrlRemota.png)
+![Ejemplo cambiando color de la fuente en Cabecera](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/assets/images/CopiasUrlRemota.png)
 
 `git remote add origin https://github.com/miguel0920/Curso-Git-Y-GitHub.git`
 
