@@ -593,4 +593,14 @@ Correr el comando `git tag` y se nos visualizara los tags que estan creados.
     git show-ref --tags
     3e7bc1018e2bffe6c18b0f0d116ff99fbc14a8cc refs/tags/v0.1
 
+## Herramienta de Git para visualizar historial del proyecto
+
+**Comando**.
+
+`gitk`
+
+**Resultado:**
+
+    ![Herramienta grafica de Git](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/Assets/Images/Programa_gitk.png)
+
 [Ir a GitHub >>](GitRemote.md)
