@@ -199,4 +199,50 @@ Revisamos la conexión actual con el comando `git remote -v` una vez se identiqu
 4. Obtener cambios desde remoto `git pull origin {nombre de la rama}`
 5. Proteger cambios y sube los cambios que se tengan en local `git push origin {nombre de la rama remota}`.
 
+## Enviar Tags al repositorio remoto
+
+**Comando.**
+
+`git push origin --tags`
+
+**Resultado.**
+
+    Enumerating objects: 1, done.
+    Counting objects: 100% (1/1), done.
+    Writing objects: 100% (1/1), 191 bytes | 191.00 KiB/s, done.
+    Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+    To github.com:miguel0920/Curso-Git-Y-GitHub.git
+    * [new tag]         v0.1 -> v0.1
+
+## Eliminar tag local
+
+**Comando.**
+
+`git tag -d {nombre del tag}`
+
+**Ejemplo.**
+
+`git tag -d dormido`
+
+**Resultado.**
+
+    git tag -d dormido
+    Deleted tag 'dormido' (was 4da3c10)
+
+## Eliminar tag remoto
+
+**Comando.**
+
+`git push origin :refs/tags/{nombre del tag}`
+
+**Ejemplo.**
+
+`git push origin :refs/tags/dormido`
+
+**Resultado.**
+
+    git push origin :refs/tags/dormido
+    To github.com:miguel0920/Curso-Git-Y-GitHub.git
+    - [deleted]         dormido
+
 [Ir a la terminal Git Bash >>](ComandBash.md)
