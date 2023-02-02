@@ -543,7 +543,8 @@ Al solicitarlo se nos visualizar el siguiente mensaje. Donde nos dice en que arc
     Automatic merge failed; fix conflicts and then commit the result.
 
 Al ver el codigo en el visual studio sale el siguiente mensaje
-![Ejemplo cambiando color de la fuente en Master](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/Assets/Images/Ejemplo%20de%20conflicto.png)
+
+![Ejemplo de conflicto realizando un merge](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/Assets/Images/Ejemplo%20de%20conflicto.png)
 
 **Accept Current Change:** Aceptar cambios de la rama Actual, en este ejemplo es master.
 
@@ -556,3 +557,40 @@ Al ver el codigo en el visual studio sale el siguiente mensaje
 **Resultado:**
 
 Una vez resuelto los cambios se realiza commit y queda todo resuelto.
+
+## Visualizar toda la historia del proyecto
+
+**Comando**.
+
+`git log --all --graph --decorate --oneline`
+
+**Resultado:**
+
+![Visualización grafica de la historia del repositorio](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/Assets/Images/Historial_Repositorio.png)
+
+## Crear Tag
+
+**Comando**.
+
+`git tag -a v0.1 -m "{mensaje}" {hash donde se agrega el tag}`
+
+**Ejemplo**.
+
+`git tag -a v0.1 -m "Resultado de las primeras clases del curso" 284fd82`
+
+**Resultado:**
+
+Correr el comando `git tag` y se nos visualizara los tags que estan creados.
+
+## Visualizar Tags detallados
+
+**Comando**.
+
+`git show-ref --tags`
+
+**Resultado:**
+
+    git show-ref --tags
+    3e7bc1018e2bffe6c18b0f0d116ff99fbc14a8cc refs/tags/v0.1
+
+[Ir a GitHub >>](GitRemote.md)

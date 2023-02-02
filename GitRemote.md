@@ -198,3 +198,5 @@ Revisamos la conexión actual con el comando `git remote -v` una vez se identiqu
         Are you sure you want to continue connecting (yes/no/[fingerprint])?
 4. Obtener cambios desde remoto `git pull origin {nombre de la rama}`
 5. Proteger cambios y sube los cambios que se tengan en local `git push origin {nombre de la rama remota}`.
+
+[Ir a la terminal Git Bash >>](ComandBash.md)
