@@ -245,4 +245,18 @@ Revisamos la conexión actual con el comando `git remote -v` una vez se identiqu
     To github.com:miguel0920/Curso-Git-Y-GitHub.git
     - [deleted]         dormido
 
+## Obtener cambios entre dos fuentes diferentes, A continuación se muestra un ejemplo para crear una nueva fuente de datos [clic](/Git.md/#crear-nueva-fuente-de-datos)
+
+**Comando.**
+
+`git pull <rama_del_remoto_de_origen> <rama_del_remoto_de_destino>`
+
+**Ejemplo.**
+
+`git pull upstream master`
+
+**Resultado.**
+
+    Se obtiene cambios de la rama remota de origen.
+
 [Ir a la terminal Git Bash >>](ComandBash.md)
