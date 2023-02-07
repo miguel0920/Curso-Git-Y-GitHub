@@ -603,4 +603,18 @@ Correr el comando `git tag` y se nos visualizara los tags que estan creados.
 
     ![Herramienta grafica de Git](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/Assets/Images/Programa_gitk.png)
 
+## Crear nueva fuente de datos
+
+**Comando**.
+
+`git remote add <nombre_del_remoto> <url_del_remoto>`
+
+**Ejemplo**.
+
+`git remote add upstream https://github.com/freddier/hyperblog`
+
+**Resultado:**
+
+Al correr el siguiente comando visualizamos la nueva fuente de datos `git remote -v`
+
 [Ir a GitHub >>](GitRemote.md)
