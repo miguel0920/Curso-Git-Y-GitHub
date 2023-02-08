@@ -673,4 +673,50 @@ Se va hacia la nueva rama y se tiene todos los cambios realizados, al correr el 
 
     Dropped refs/stash@{0} (15da5d56a876bc213244213)
 
+## Listar archivos que quiero quitar de la solución
+
+**Comando**.
+
+Solo se listara los archivos que no omita ***.gitignore***
+
+`git clean --dry-run`
+
+**Resultado:**
+
+Ejemplo:
+
+    Would remove <nombre_del_archivo>.txt
+
+## Eliminar archivos
+
+**Comando**.
+
+`git clean -f`
+
+**Resultado:**
+
+Ejemplo:
+
+    Removing <nombre_del_archivo>.txt
+
+## Obtener un commit de otra rama (mala práctica)
+
+Git Cherry-pick es un comando que permite tomar uno o varios commits de otra rama o branch sin tener que hacer un merge completo. Así, gracias a cherry-pick, podríamos aplicar los commits relacionados con nuestra funcionalidad en la rama master sin necesidad de hacer un merge.
+
+**Comando**.
+
+`git cherry-pick <hash_del_commit>`
+
+**Resultado:**
+
+Creamos 3 commit sobre una rama y cuando se desea obtener un cambio que esta sobre otra rama, buscamos el hash de ese commit o varios, despues nos pasamos a la rama donde se desea tener esos cambios y corremos el comando.
+
+Ejemplo de respuesta al correr el comando:
+
+    [master c66c7a5] Creditos al team Platzi
+    Date: Thu Apr 18 12:13:12 2023 -0700
+    1 file changed, 1 insertion(+)
+
+Despues obtenemos cambios de la rama remota y enviamos cambios y queda actualizada la rama con solo los cambios requeridos.
+
 [Ir a GitHub >>](GitRemote.md)
