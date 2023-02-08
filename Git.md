@@ -617,4 +617,60 @@ Correr el comando `git tag` y se nos visualizara los tags que estan creados.
 
 Al correr el siguiente comando visualizamos la nueva fuente de datos `git remote -v`
 
+## Crear un stash
+
+El stashed nos sirve para guardar cambios para después, Es una lista de estados que nos guarda algunos cambios que hicimos en Staging para poder cambiar de rama o branch sin perder el trabajo que todavía no guardamos en un commit.
+
+**Comando**.
+
+Modificamos algo sobre cualquier archivo y corremos el siguiente comando.
+
+`git stash`
+
+**Resultado:**
+
+    Saved working directory and index state WIP on master: 62d3c2e Exp 2
+
+De hay podemos cambiar de rama.
+
+## Listar los stash
+
+**Comando**.
+
+`git stash list`
+
+**Resultado:**
+
+    stash@{0}: WIP on master: 62d3c2e Exp 2
+
+## Obtener el stash donde guarde los cambios de forma temporal
+
+**Comando**.
+
+`git stash pop`
+
+**Resultado:**
+
+Devuelve los cambios que se guardaron de forma temporal.
+
+## Llevar el stash a una nueva rama
+
+**Comando**.
+
+`git stash branch <nombre_de_la_rama>`
+
+**Resultado:**
+
+Se va hacia la nueva rama y se tiene todos los cambios realizados, al correr el comando `git branch` se lista la ramas y la nueva creada.
+
+## Eliminar el stash
+
+**Comando**.
+
+`git stash drop`
+
+**Resultado:**
+
+    Dropped refs/stash@{0} (15da5d56a876bc213244213)
+
 [Ir a GitHub >>](GitRemote.md)
