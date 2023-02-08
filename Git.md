@@ -764,4 +764,36 @@ Elimina todo en el historial y queda en el hash como el más actualizado hasta e
 
     HEAD is not at c894560 <Comentario del push>.
 
+## Remendar un commit
+
+Remendar un commit con amend puede modificar el commit más reciente (enmendar) en la misma rama.
+
+Este comando sirve para agregar archivos nuevos o actualizar el commit anterior y no generar commits innecesarios. También es una forma sencilla de editar o agregar comentarios al commit anterior porque abrirá la consola para editar este commit anterior.
+
+***Atención***
+
+Usar amend es una mala práctica, sobre todo cuando ya se ha hecho push o pull al repositorio remoto. Al momento de hacer amend con algún commit que esté en remoto, va a generar un conflicto que se va a arreglar haciendo un commit adicional y se perderá el beneficio del amend.
+
+**Comando**.
+
+`git commit --amend`
+
+**Ejemplo**.
+
+1. Aplicamos un cambio sobre el archivo y realizamos un commit.
+
+        $ git commit -am 'cambiar texto del tagline'
+        [master 03aa0e1] cambiar texto del tagline
+        2 files changed, 25 insertions(+), 1 deletion(-)
+
+2. Se nos olvida aplicar un cambio. aplicamos el cambio y corremos el comando `git add <archivos_modificados>`.
+
+3. corremos el comando, y lo que nos hace es que los cambios realizados los enviamos al commit anterior.
+
+**Resultado:**
+
+Elimina todo en el historial y queda en el hash como el más actualizado hasta el momento.
+
+    HEAD is not at c894560 <Comentario del push>.
+
 [Ir a GitHub >>](GitRemote.md)
