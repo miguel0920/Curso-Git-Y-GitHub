@@ -788,12 +788,99 @@ Usar amend es una mala práctica, sobre todo cuando ya se ha hecho push o pull a
 
 2. Se nos olvida aplicar un cambio. aplicamos el cambio y corremos el comando `git add <archivos_modificados>`.
 
-3. corremos el comando, y lo que nos hace es que los cambios realizados los enviamos al commit anterior.
+3. corremos el comando, y lo que nos hace es que los cambios realizados los une con el commit anterior sin necesidad de hacer otro commit.
+
+4. Nos dira si deseamos cambiar el mensaje del commit.
+
+5. Visualizamos el resultado.
 
 **Resultado:**
 
-Elimina todo en el historial y queda en el hash como el más actualizado hasta el momento.
+    $ git commit --amend
+    [master a4266fd] cambiar texto del tagline se agrega nuevo parrafo.
+    Date: Tue Feb 7 21:11:34 2023 -0500
+    2 files changed, 38 insertions(+), 1 deletion(-)
 
-    HEAD is not at c894560 <Comentario del push>.
+## Buscar una palabra en toda la solución
+
+**Comando**.
+
+`git grep <palabra_a_buscar>`
+
+**Ejemplo**.
+
+`git grep color`
+
+**Resultado:**
+
+    Assets/css/styles.css:    color: green;
+    Assets/css/styles.css:    color: white;
+    Git.md:![Ejemplo cambiando color de la fuente en Cabecera](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/Assets/Images/CambiarEstilo_ConflictoMerge_Cabecera.png)
+    Git.md:![Ejemplo cambiando color de la fuente en Master](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/Assets/Images/CambiarEstilo_ConflictoMerge_Master.png)
+    GitRemote.md:![Ejemplo cambiando color de la fuente en Cabecera](https://github.com/miguel0920/Curso-Git-Y-GitHub/raw/main/Assets/Images/CopiasUrlRemota.png)
+
+## Buscar una palabra y # de la línea en toda la solución
+
+**Comando**.
+
+`git grep -n <palabra_a_buscar>`
+
+**Ejemplo**.
+
+`git grep -n Lorem`
+
+**Resultado:**
+
+    $ git grep -n Lorem
+    blogpost.html:23:            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga maiores quae voluptates error pariatur
+    blogpost.html:28:                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos veniam, eligendi, eveniet tenetur odit
+    blogpost.html:33:                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos veniam, eligendi, eveniet tenetur odit
+
+## Obtener la cantidad que se repite una palabra
+
+**Comando**.
+
+`git grep -c <palabra_a_buscar>`
+
+**Ejemplo**.
+
+`git grep -c Lorem`
+
+Buscar una etiqueta por ejemplo.
+
+`git grep -c "<p>"`
+
+**Resultado:**
+
+    $ git grep -c Lorem
+    Git.md:5
+    blogpost.html:3
+
+    $ git grep -c "<p>"
+    Git.md:2
+    blogpost.html:3
+
+## Buscar la cantidad de palabras repetidas en el historial
+
+**Comando**.
+
+`git log -S "<palabra_a_buscar>"`
+
+**Ejemplo**.
+
+`git log -S "blog"`
+
+**Resultado:**
+
+    $ git log -S "blog"
+    commit d9f72a096b8c2e814c2b20acde04dd280771af63 (origin/header, header)
+    Author: Miguel Angel Barahona <miguelbarahona00@gmail.com>
+    Date:   Mon Feb 6 20:57:59 2023 -0500
+
+        Agregar comando para trabajar con diferentes destinos
+
+    commit 8ac0a49e77bf2597165677d990d38071ba4a7623
+    Author: Miguel Angel Barahona <miguelbarahona00@gmail.com>
+    Date:   Wed Feb 1 20:28:22 2023 -0500
 
 [Ir a GitHub >>](GitRemote.md)
