@@ -883,4 +883,92 @@ Buscar una etiqueta por ejemplo.
     Author: Miguel Angel Barahona <miguelbarahona00@gmail.com>
     Date:   Wed Feb 1 20:28:22 2023 -0500
 
+## Buscar cuantos commit a hecho el equipo
+
+**Comando**.
+
+`git shortlog -sn --all`
+
+**Resultado:**
+
+    git shortlog -sn --all
+        39  Miguel Angel
+
+## Buscar cuantos commit a hecho el equipo sin el merge
+
+**Comando**.
+
+`git shortlog -sn --all`
+
+**Resultado:**
+
+    $ git shortlog -sn --all --no-merges
+        35  Miguel Angel Barahona
+
+`git shortlog -sn --all --no-merges`
+
+**Resultado:**
+
+    git shortlog -sn --all
+        39  Miguel Angel
+
+## Crear un alías global
+
+**Comando**.
+
+`git config --global alias.<nombre_del_alías> "<comando>"`
+
+**Ejemplo**.
+
+`git config --global alias.stats "shortlog -sn --all --no-merges"`
+
+**Resultado:**
+
+Una vez creado corremos el comando `git <nombre_del_alías>`, ejemplo `$ git stats`
+
+    $ git stats
+    35  Miguel Angel Barahona
+
+## Quien realizo cambios sobre un archivo
+
+**Comando**.
+
+`git blame <nombre_del_archivo>.<extensión>`
+
+**Ejemplo**.
+
+`git blame historia.txt`
+
+**Resultado:**
+
+    $ git blame historia.txt
+    637bc508 (Miguel Angel Barahona 2023-01-25 20:40:38 -0500  1) Esta es la historio de Miguel
+    637bc508 (Miguel Angel Barahona 2023-01-25 20:40:38 -0500  2)
+    637bc508 (Miguel Angel Barahona 2023-01-25 20:40:38 -0500  3) Miguel tiene 27 años y nació en Colombia
+    637bc508 (Miguel Angel Barahona 2023-01-25 20:40:38 -0500  4)
+    fc71632a (Miguel Angel Barahona 2023-01-25 20:56:55 -0500  5) Hoy hablaremos de su historia.
+    fc71632a (Miguel Angel Barahona 2023-01-25 20:56:55 -0500  6)
+    e4089360 (Miguel Angel Barahona 2023-01-27 20:59:10 -0500  7) Sus cualidades son:
+    e4089360 (Miguel Angel Barahona 2023-01-27 20:59:10 -0500  8)
+    e4089360 (Miguel Angel Barahona 2023-01-27 20:59:10 -0500  9) - Honesto
+    e4089360 (Miguel Angel Barahona 2023-01-27 20:59:10 -0500 10) - Respetuoso
+
+## Quien realizo cambios sobre un archivo desde una linea a otra
+
+**Comando**.
+
+`git blame <nombre_del_archivo>.<extensión> -L35,60`
+
+**Ejemplo**.
+
+`git blame historia.txt -L2,5`
+
+**Resultado:**
+
+    $ git blame historia.txt -L2,5
+    637bc508 (Miguel Angel Barahona 2023-01-25 20:40:38 -0500 2)
+    637bc508 (Miguel Angel Barahona 2023-01-25 20:40:38 -0500 3) Miguel tiene 27 años y nació en Colombia
+    637bc508 (Miguel Angel Barahona 2023-01-25 20:40:38 -0500 4)
+    fc71632a (Miguel Angel Barahona 2023-01-25 20:56:55 -0500 5) Hoy hablaremos de su historia.
+
 [Ir a GitHub >>](GitRemote.md)
