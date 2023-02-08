@@ -719,4 +719,49 @@ Ejemplo de respuesta al correr el comando:
 
 Despues obtenemos cambios de la rama remota y enviamos cambios y queda actualizada la rama con solo los cambios requeridos.
 
+## Listar toda la historia completa
+
+**Comando**.
+
+`git reflog`
+
+**Resultado:**
+
+    aa27bee HEAD@{40}: checkout: moving from cabecera to master
+    77f9e1f HEAD@{41}: commit: Se agrega cabecera y se modifica el README.md
+    aa27bee HEAD@{42}: checkout: moving from master to cabecera
+    aa27bee HEAD@{43}: commit: Cambiar el HTML y agregar estilos
+    e408936 HEAD@{44}: commit: Reemplazo de versión del archivo historia.txt y se agrega mas comando en README.md
+    284fd82 (tag: v0.1) HEAD@{45}: commit: Pagina y estilos Blog post
+    f591517 HEAD@{46}: commit: Se modifica README y a se agrega Imagen
+    fc71632 HEAD@{47}: commit: Agregamos un cambio en su personalidad.
+    637bc50 HEAD@{48}: commit: Modificación archivo historia y se añade comandos al README.md
+    07e0ccf HEAD@{49}: commit (initial): Primer commit
+
+## Aplicar git reset --SOFT
+
+**git reset --soft HashDelHEAD**: te mantiene lo que tengas en staging ahí.
+
+**Comando**.
+
+`git reset <cabecera que se quiere volver>`
+
+**Resultado:**
+
+Queda en estado no protegido, pero no devuelve los archivos eliminados o modificados.
+
+## Aplicar git reset --HARD
+
+**git reset --hard HashDelHEAD**: resetea absolutamente todo incluyendo lo que tengas en staging.
+
+**Comando**.
+
+`git reset --HARD <cabecera que se quiere volver>`
+
+**Resultado:**
+
+Elimina todo en el historial y queda en el hash como el más actualizado hasta el momento.
+
+    HEAD is not at c894560 <Comentario del push>.
+
 [Ir a GitHub >>](GitRemote.md)
