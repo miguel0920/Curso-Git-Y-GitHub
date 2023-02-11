@@ -259,4 +259,35 @@ Revisamos la conexión actual con el comando `git remote -v` una vez se identiqu
 
     Se obtiene cambios de la rama remota de origen.
 
+## Visualizar ramas remotas
+
+**Comando.**
+
+`git branch -r`
+
+**Resultado.**
+
+    git branch -r
+    origin/footer
+    origin/header
+    origin/main
+    origin/master
+
+## Visualizar todas las ramas (remotas y locales)
+
+**Comando.**
+
+`git branch -a`
+
+**Resultado.**
+
+    git branch -a
+    footer
+    header
+    * master
+    remotes/origin/footer
+    remotes/origin/header
+    remotes/origin/main
+    remotes/origin/master
+
 [Ir a la terminal Git Bash >>](ComandBash.md)
